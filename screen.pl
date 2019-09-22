@@ -23,7 +23,7 @@ $sth->execute;
 while (($id,$name,$link,$iface) = $sth->fetchrow_array) {
 chomp($id,$name,$link,$iface);
 warn($id ,$link);
-system("/usr/bin/timeout 20s /usr/bin/ffmpeg -i udp://\@$link:$port -y -f image2 -t 0.001 -ss 00:00:4 -s 240*160 /var/www/html/screen/$id.jpg");
+system("/usr/bin/timeout 20s /usr/bin/ffmpeg -i udp://\@$link:$port -y -f image2 -t 0.001 -ss 00:00:4 -s 320*240 /var/www/html/screen/$id.jpg");
 }
 $rc = $sth->finish;    # закрываем
 $rc = $dbh->disconnect;  # соединение
