@@ -128,5 +128,6 @@ dmypy.json
 .idea/
 
 # Other
+.vscode/
 playlist.m3u8
 converted.txt
